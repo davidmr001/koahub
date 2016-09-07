@@ -1,0 +1,34 @@
+{
+  "name": "koahub",
+  "version": "1.0.8",
+  "description": "koahub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/einsqing/koahub.git"
+  },
+  "keywords": [
+    "koa",
+    "koahub",
+    "middleware"
+  ],
+  "author": {
+    "name": "js.koahub.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/einsqing/koahub/issues"
+  },
+  "homepage": "https://github.com/einsqing/koahub#readme",
+  "dependencies": {
+    "koahub-loader": "*"
+  },
+  "readme": "koahub web fast framework\n\n## Installation\n\n```sh\n$ npm install koahub\n```\n\n## Use with koa\n\n```js\n  var app = require('koa')();\n  var router = require('koa-router')();\n\n  require('koahub');\n\n  for (var key in koahub.controller){\n      router.use(key, koahub.controller[key]);\n  }\n\n  // sample as\n  router.use('/home', auth('home').skip({path: [/public/]}));\n  app.use(router.routes());\n\n  // sample as\n  console.log(koahub.model);\n  console.log(koahub.controller);\n  console.log(koahub.util);\n\n  app.listen(3000);\n```\n\n官网：[http://js.koahub.com](http://js.koahub.com)\n\n[![image](http://www.koahub.com/public/ad.jpg \"koahub软件市场\")](http://www.koahub.com)",
+  "readmeFilename": "README.md",
+  "_id": "koahub@1.0.8",
+  "_shasum": "a7a3af413885f90f22dea776aaef4eb8421ad156",
+  "_from": "koahub@latest"
+}
